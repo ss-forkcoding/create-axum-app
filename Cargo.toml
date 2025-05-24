@@ -1,0 +1,17 @@
+[package]
+name = "create-axum-app"
+authors = ["fork-coding <danju@starlight-sangdan.com>"]
+description = "Create a new axum app with a single command"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/ss-forkcoding/create-axum-app.git"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.38", features = ["derive"] }
+
+
+[[bin]]
+name = "create-axum-app"
+path = "src/main.rs"
