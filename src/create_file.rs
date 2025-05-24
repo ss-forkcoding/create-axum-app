@@ -5,14 +5,6 @@ pub fn change_main(project_name: &String) -> Result<(), Error> {
 
     std::fs::write(format!("{}/src/main.rs", project_name), main_source)?;
 
-    let fmt_status = std::process::Command::new("cargo")
-        .arg("fmt")
-        .output()
-        .expect("failed to execute process");
-
-    if !fmt_status.status.success() {
-        return Err(Error::new(std::io::ErrorKind::Other, "fmt failed"));
-    }
     Ok(())
 }
 
