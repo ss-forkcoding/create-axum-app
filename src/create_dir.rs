@@ -39,7 +39,7 @@ pub fn add_basic_dependencies(project_name: &String) -> Result<(), Error> {
     basic_dependencies.insert("serde", Some("derive".to_string()));
     basic_dependencies.insert("serde_json", None);
     basic_dependencies.insert("tower", None);
-    basic_dependencies.insert("tower-http", None);
+    basic_dependencies.insert("tower-http", Some("trace".to_string()));
     basic_dependencies.insert("tracing", None);
     basic_dependencies.insert("tracing-subscriber", None);
 
